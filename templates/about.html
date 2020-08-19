@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+<title>Course - Elements</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Course Project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'plugins/fontawesome-free-5.0.1/css/fontawesome-all.css' %}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/elements_styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/elements_responsive.css' %}">
+    <style>
+
+/*=========================*/
+/* Team Boxes */
+/*=========================*/
+.team-body {
+    width:100%;
+	height:100%;
+	margin:0;
+}
+.team-wrap {
+	width:100%;
+	margin:0 auto;
+	display:table;
+}
+.team-wrap img {
+	width:100%;
+}
+.team-boxes {
+	background:#fff;
+	padding:0;
+}
+.team-boxes .separator {
+	height:1px;
+	width:36px;
+	margin:7px 0 7px 20px;
+	clear:both;
+	background-color:#20b2aa;
+}
+.team-boxes .team_quote p {
+	font-size:14px;
+	color:rgba(255,255,255,0.8);
+	font-weight:300;
+	letter-spacing:1px;
+}
+.team-info {
+	text-align:left;
+	margin:15px auto 0 auto;
+	padding:0 20px;
+}
+.team-info p {
+	margin:0;
+	padding:0;
+	font-size:14px;
+	color:#5A5A5A;
+	text-transform:uppercase;
+	font-weight:300;
+}
+.team-info h2 {
+	margin:0;
+	padding:5px 0 6px 0;
+	font-size:16px;
+	font-weight:600;
+	text-transform:uppercase;
+	color:#444;
+	letter-spacing:1px;
+}
+.team-social {
+	width:100%;
+	margin-top:19px;
+	padding:5px 20px 26px 20px;
+}
+.team-social a {
+	background:#FFF;
+	height:40px;
+	width:40px;
+	text-align:center;
+	border-radius:5px;
+	color:#494949;
+	line-height:40px;
+	font-size:15px;
+	border:solid 1px #eee;
+	-webkit-transition:all 0.3s ease-in;
+	-moz-transition:all 0.3s ease-in;
+	-o-transition:all 0.3s ease-in;
+	transition:all 0.3s ease-in;
+	display:inline-block;
+	margin-bottom:3px;
+	margin-right:4px;
+}
+.team-social a:hover {
+	border:solid 1px #4a4a4a;
+}
+.overlay-image {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:relative;
+	text-align:center;
+	background:#303543;
+}
+.overlay-image .mask,.overlay-image .content {
+	width:100%;
+	height:100%;
+	position:absolute;
+	overflow:hidden;
+	top:0;
+	left:0;
+}
+.view-overlay img {
+	-webkit-transform:scaleY(1);
+	-moz-transform:scaleY(1);
+	-o-transform:scaleY(1);
+	-ms-transform:scaleY(1);
+	transform:scaleY(1);
+	-webkit-transition:all 0.7s ease-in-out;
+	-moz-transition:all 0.7s ease-in-out;
+	-o-transition:all 0.7s ease-in-out;
+	-ms-transition:all 0.7s ease-in-out;
+	transition:all 0.7s ease-in-out;
+}
+.view-overlay .mask {
+	-webkit-transition:all 0.5s linear;
+	-moz-transition:all 0.5s linear;
+	-o-transition:all 0.5s linear;
+	-ms-transition:all 0.5s linear;
+	transition:all 0.5s linear;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter:alpha(opacity=0);
+	opacity:0;
+}
+.port-zoom-link {
+	position:absolute;
+	top:30%;
+	right:0;
+	bottom:0;
+	left:0;
+	margin:auto;
+	padding:0 20px;
+}
+.view-overlay:hover img {
+	-webkit-transform:scale(10);
+	-moz-transform:scale(10);
+	-o-transform:scale(10);
+	-ms-transform:scale(10);
+	transform:scale(10);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter:alpha(opacity=0);
+	opacity:0;
+}
+.view-overlay:hover .mask {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter:alpha(opacity=100);
+	opacity: 1;
+}
+    </style>
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	{% include 'header.html' %}
+
+	<!-- Menu -->
+	<div class="menu_container menu_mm">
+
+		<!-- Menu Close Button -->
+		<div class="menu_close_container">
+			<div class="menu_close"></div>
+		</div>
+
+		<!-- Menu Items -->
+		<div class="menu_inner menu_mm">
+			<div class="menu menu_mm">
+				<ul class="menu_list menu_mm">
+					<li class="menu_item menu_mm"><a href="index.html">Home</a></li>
+					<li class="menu_item menu_mm"><a href="">About us</a></li>
+					<li class="menu_item menu_mm"><a href="courses.html">Courses</a></li>
+					<li class="menu_item menu_mm"><a href="#">Elements</a></li>
+					<li class="menu_item menu_mm"><a href="news.html">News</a></li>
+					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+				</ul>
+
+				<!-- Menu Social -->
+
+				<div class="menu_social_container menu_mm">
+					<ul class="menu_social menu_mm">
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						<li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+					</ul>
+				</div>
+
+				<div class="menu_copyright menu_mm"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Home -->
+
+	<div class="home mb-0" >
+		<div class="home_background_container prlx_parent">
+			<div class="home_background prlx" style="background-image:url({% static 'img/6.webp' %})"></div>
+		</div>
+		<div class="home_content">
+			<h1>About US</h1>
+		</div>
+	</div >
+
+	<!-- Elements -->
+
+	<div class="elements mt-0">
+
+
+			<div class="container">
+
+				<div class="row pbars_accordions_container">
+					<!-- Progress Bars & Accordions -->
+
+					<div class="col-lg-12">
+
+						<!-- Progress Bars -->
+						<div class="elements_progress_bars">
+
+							<div class="pbar_container">
+
+								<ul class="progress_bar_container col_12 clearfix">
+									<li class="pb_item">
+										<h1>St. Peter Claver English Medium Pre & Primary School is one of the best Schools in Tanzania. Its premises are located at Bugene near Nyakasana Parish, 2Km from Omurushaka small town.</h1>
+                                        <hr>
+									</li>
+									<li class="pb_item">
+										<h1>St. Peter Claver English Medium Pre & Primary School is owned by the Kayanga Catholic Diocese. The school follows Tanzanian Educational Curriculum under The Ministry of Education, Science Technology and Vocation Training. The school is found in Bugene Ward, Karagwe District Kagera Region about 2 km from Omurushaka small town.</h1>
+                                        <hr>
+									</li>
+									<li class="pb_item">
+										<h1>Kayanga Catholic Diocese has invested enormous resources in St. Peter Claver EMP/S in order to train the young generationto become God fearing and Patriotic builders of the Nation. The School renders quality Education at an affordable cost in a tranquil environment with courses in Pre-Primary (Nursery) and Primary which is from standard 1 – 7.</h1>
+                                        <hr>
+                                    </li>
+									<li class="pb_item">
+										<h1>St. Peter Claver EMP/S offers Pre-Primary one and Pre-Primary two (PP1&PP2). The Pre-Primary Scholar shave both boarding and day provisions whereas pupils from standard 1 – 7 are compulsorily boarding scholars.</h1>
+                                        <hr>
+                                    </li>
+                                    <li class="pb_item">
+										<h1>St. Peter Claver English Medium Pre & Primary School registers pupils from all Regions in Tanzania, East Africa and other parts of the World. St. Peter Claver EMP/S being the Catholic School admits pupils of other Religious Ideologies both Boys and Girls.</h1>
+                                        <hr>
+                                    </li>
+                                    <li class="pb_item">
+                                        <h1>The School provides the resources for pupils with diverse interests and abilities as much as needed. We have exceptional academic records and are renowned for the excellent performances of our pupils.
+
+We have experienced, qualified and committed staff members who educate and inspire. You cannot regret to join us.</h1>
+                                        <hr>
+                                    </li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="col-lg-12 mt-3">
+
+						<!-- Accordions -->
+						<div class="elements_accordions">
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"><h1>SCHOOL VISION</h1></div>
+								<div class="accordion_panel">
+                                    <h2>To excel disciplinary, morally and academically</h2>
+                                </div>
+							</div>
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"><h1>SCHOOL MISSION</h1> </div>
+								<div class="accordion_panel">
+                                    <h2>To equip pupils with quality knowledge and skills, self- discipline and moral values as means of success.</h2>
+								</div>
+							</div>
+
+							<div class="accordion_container">
+								<div class="accordion d-flex flex-row align-items-center"><h1>SCHOOL MOTTO</h1> </div>
+								<div class="accordion_panel">
+                                    <h2>“DISCIPLINE, EDUCATION AND MORALITY”</h2>
+                                </div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+		<!-- Loaders -->
+
+
+
+		<!-- Milestones -->
+
+		<div class="milestones">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="elements_title">Milestones</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="milestones_container">
+				<div class="milestones_background" style="background-image:url({% static 'images/milestones_background.jpg' %})"></div>
+
+				<div class="container">
+					<div class="row">
+
+						<!-- Milestone -->
+						<div class="col-lg-3 milestone_col">
+							<div class="milestone text-center">
+								<div class="milestone_icon"><img src="{% static 'images/milestone_1.svg' %}" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+								<div class="milestone_counter" data-end-value="750">0</div>
+								<div class="milestone_text">Current Students</div>
+							</div>
+						</div>
+
+						<!-- Milestone -->
+						<div class="col-lg-3 milestone_col">
+							<div class="milestone text-center">
+								<div class="milestone_icon"><img src="{% static 'images/milestone_2.svg' %}" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+								<div class="milestone_counter" data-end-value="120">0</div>
+								<div class="milestone_text">Certified Teachers</div>
+							</div>
+						</div>
+
+						<!-- Milestone -->
+						<div class="col-lg-3 milestone_col">
+							<div class="milestone text-center">
+								<div class="milestone_icon"><img src="{% static 'images/milestone_2.svg' %}" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+								<div class="milestone_counter" data-end-value="39">0</div>
+								<div class="milestone_text">Awards</div>
+							</div>
+						</div>
+
+						<!-- Milestone -->
+						<div class="col-lg-3 milestone_col">
+							<div class="milestone text-center">
+								<div class="milestone_icon"><img src="{% static 'images/milestone_4.svg' %}" alt="https://www.flaticon.com/authors/zlatko-najdenovski"></div>
+								<div class="milestone_counter" data-end-value="3500" data-sign-before="+">0</div>
+								<div class="milestone_text">Graduate Students</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Icon Boxes -->
+
+		<div class="icon_boxes">
+
+
+		</div>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container">
+     <h1 style=" color: #1a1a1a" class=" mb-5"> <strong>Our Team</strong></h1>
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12" >
+            <div class="team-boxes" >
+                <div class="team-thumb overlay-image view-overlay" style="border-radius:30px;" >
+                    <img width="400px" height="300px"  src="{% static 'img/Fr.-Alchelaus-Kalokola_2.webp' %}" alt="">
+                    <div class="clear">
+                    </div>
+                    <div class="mask team_quote">
+                        <div class="port-zoom-link">
+                            <p>
+                                <span class="accentcolor" style="font-weight:700;">About me</span>
+                                <br>
+                                <i>"All the world's a stage<br>DATE OF BIRTH: 27/8/1975 PLACE OF BIRTH: Itahwa, Bukoba ORDINATION TO PRIESTHOOD: 21/7/2013 (Kayanga Catholic Diocese) LICENCIATE: Masters degree in Higher Education Management and Development B.A IN THEOLOGY: 2010 B.A IN PHILOSOPHY: 2003 ADVANCED SECONDARY EDUCATION: 1998 ORDINARY SECONDARY EDUCATION: 1996 PRIMARY SCHOOL EDUCATION: 1992 DEPARTMENT: Head Teacher."</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h2>Rev. Fr Alchelaus Kalokora Mutalemwa</h2>
+                    <p>
+                        Head Teacher
+                    </p>
+                </div>
+                <div class="separator">
+                </div>
+                <div class="team-social">
+                    <a href=""><i class="fa fa-facebook-square"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                    <a href=""><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="team-boxes">
+                <div class="team-thumb overlay-image view-overlay" style="border-radius:30px;">
+                    <img width="400px" height="300px"  src="{% static 'img/Mpya-11_1.webp' %}" alt="">
+                    <div class="clear">
+                    </div>
+                    <div class="mask team_quote">
+                        <div class="port-zoom-link">
+                            <p>
+                                <span class="accentcolor" style="font-weight:700;">ABOUT ME:)</span>
+                                <br> "DATE OF BIRTH: 23/11/1944 PLACE OF BIRTH: Buyango, Missenyi. DIPLOMA IN EDUCATION: 1975 B.A IN THEOLOGY: 1969 B.A IN PHILOSOPHY: 1967 ORDINARY SECONDARY EDUCATION: 1965 PRIMARY SCHOOL EDUCATION: 1961 PROFESSION: Tearcher DEPARTMENT: Deputy Head Teacher"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h2>Mr Gratian Felician Rutayuga</h2>
+                    <p>
+                       Deputy Head Teacher
+                    </p>
+                </div>
+                <div class="separator">
+                </div>
+                <div class="team-social">
+                    <a href=""><i class="fa fa-facebook-square"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                    <a href=""><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="team-boxes">
+                <div class="team-thumb overlay-image view-overlay" style="border-radius:30px;">
+                    <img src="{% static 'img/Lenitha.webp' %}" alt="">
+                    <div class="clear">
+                    </div>
+                    <div class="mask team_quote">
+                        <div class="port-zoom-link">
+                            <p>
+                                <span class="accentcolor" style="font-weight:700;">SHOULD I QUOTE?</span>
+                                <br> "NAMES: Lenitha Jeremiah Katebala PLACE OF BIRTH: Bugomora Kyerwa DATE OF BIRTH: 2/11/1994 MARITAL STATUS: Single Academic background PRIMARY SCHOOL: Kigorogoro P/School 2009 SECONDARY SCHOOL: Bugomora Sec. School 2013 COLLEGE/CAREER: Nyakahanga Hospital E.L.C.T 2015 Laboratory Attendant WORKING EXPERIENCE: Businde Dispensary 2016 WORK STATION: St. Peter Claver English Medium Pre and primary school Pre & Primary School DEPARTMENT: Health and Sanitation Assistant Matron Care taker of the sick"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h2>Miss Lenitha Jeremiah Katebala</h2>
+                    <p>
+                        Teacher
+                    </p>
+                </div>
+                <div class="separator">
+                </div>
+                <div class="team-social">
+                    <a href=""><i class="fa fa-facebook-square"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                    <a href=""><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+
+			<!-- Footer Copyright -->
+
+			<div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
+				<div class="footer_copyright">
+					<span>St Peter Claver Pre & Primary School 2020 All rights reserved</span>
+				</div>
+				<div class="footer_social ml-sm-auto">
+					<ul class="menu_social">
+						<li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+						<li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+						<li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+						<li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+						<li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+
+</div>
+
+
+<script src="{% static 'js/jquery-3.2.1.min.js'  %}"></script>
+<script src="{% static 'styles/bootstrap4/popper.js'  %}"></script>
+<script src="{% static 'styles/bootstrap4/bootstrap.min.js'  %}"></script>
+<script src="{% static 'plugins/greensock/TweenMax.min.js'  %}"></script>
+<script src="{% static 'plugins/greensock/TimelineMax.min.js'  %}"></script>
+<script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js'  %}"></script>
+<script src="{% static 'plugins/greensock/animation.gsap.min.js'  %}"></script>
+<script src="{% static 'plugins/greensock/ScrollToPlugin.min.js'  %}"></script>
+<script src="{% static 'plugins/progressbar/progressbar.min.js'  %}"></script>
+<script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js'  %}"></script>
+<script src="{% static 'plugins/easing/easing.js'  %}"></script>
+<script src="{% static 'js/elements_custom.js'  %}"></script>
+
+</body>
+</html>

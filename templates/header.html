@@ -1,0 +1,57 @@
+	{% load static %}
+<header class="header d-flex flex-row">
+		<div class="header_content d-flex flex-row align-items-center">
+			<!-- Logo -->
+			<div class="logo_container">
+				<div class="logo">
+					<img height="100px" width="100px" src="{% static 'images/logo1.jpeg' %}" alt="">
+				</div>
+			</div>
+
+			<!-- Main Navigation -->
+			<nav class="main_nav_container">
+				<div class="main_nav">
+					<ul class="main_nav_list">
+						<li class="main_nav_item"><a href="{% url 'home' %}">home</a></li>
+						<li class="main_nav_item"><a href="{% url 'about' %}">about us</a></li>
+						<li class="main_nav_item"><a href="#">Performance</a></li>
+						<li class="main_nav_item">
+
+                            <div class="dropdown">
+                                <a  href="#" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Academic <i class="fas fa-caret-down ml-1"></i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <a class="dropdown-item" href="#">General Timetable</a>
+                                    <hr>
+                                    <a class="dropdown-item" href="#">School Calender</a>
+                                    <hr>
+                                    <a class="dropdown-item" href="#">School Result</a>
+                                    <hr>
+                                    <a class="dropdown-item" href="#">NECTA Result</a><hr>
+                                     <hr>
+                                    <a class="dropdown-item" href="#">Downloads</a><hr>
+                                    <hr>
+                                    <a class="dropdown-item" href="#">Gallery</a>
+                                </div>
+                            </div>
+                        </li>
+						<li class="main_nav_item"><a href="{% url 'blog' %}">Blog</a></li>
+
+                        <li class="main_nav_item"><a href="{% url 'contact' %}">contact</a></li>
+					</ul>
+				</div>
+			</nav>
+			</nav>
+		</div>
+		<div class="header_side d-flex flex-row justify-content-center align-items-center">
+			<img src="{% static 'images/phone-call.svg' %}" alt="">
+			<span>+255 787 274 191</span>
+		</div>
+
+		<!-- Hamburger -->
+		<div class="hamburger_container">
+			<i class="fas fa-bars trans_200"></i>
+		</div>
+
+	</header>
